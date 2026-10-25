@@ -1,0 +1,1494 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0; /* إزالة الهوامش الافتراضية */
+  padding: 0; /* إزالة الهوامش والحشو الافتراضي */
+  box-sizing: border-box; /* ضبط حجم الصندوق */
+  font-family: "Spartan", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth; /* سلوك التمرير السلس */
+}
+
+/* Global Styles */
+
+h1 {
+  font-size: 50px; /* حجم الخط */
+  line-height: 64px; /* ارتفاع السطر */
+  color: #222;
+}
+
+h2 {
+  font-size: 46px; /* حجم الخط */
+  line-height: 54px; /* ارتفاع السطر */
+  color: #222; /* لون النص */
+}
+
+h4 {
+  font-size: 20px; /* حجم الخط */
+  color: #222; /* لون النص */
+}
+
+h6 {
+  font-weight: 700; /* سماكة الخط */
+  font-size: 12px; /* حجم الخط */
+}
+
+p {
+  font-size: 16px; /* حجم الخط */
+  color: #465b52; /* لون النص */
+  margin: 15px 0 20px 0; /* الهامش العلوي والسفلي */
+}
+
+.section-p1 {
+  padding: 40px 80px; /* الحشو العلوي والسفلي */
+}
+
+.section-m1 {
+  margin: 40px 0; /* الهامش العلوي والسفلي */
+}
+
+button.normal {
+  /* زر عادي */
+  font-size: 14px; /* حجم الخط */
+  font-weight: 600; /* سماكة الخط */
+  padding: 15px 30px; /* الحشو العلوي والسفلي */
+  color: #000; /* لون النص */
+  background-color: #fff; /* لون الخلفية */
+  border-radius: 4px; /* نصف قطر الزوايا */
+  cursor: pointer; /* مؤشر الفأرة */
+  border: none; /* إزالة الحدود */
+  outline: none; /* إزالة الحدود الخارجية */
+  transition: 0.2s; /* الانتقال السلس */
+}
+
+button.white {
+  font-size: 13px; /* حجم الخط */
+  font-weight: 600; /* سماكة الخط */
+  padding: 11px 18px; /* الحشو العلوي والسفلي */
+  color: #fff; /* لون النص */
+  background-color: transparent; /* لون الخلفية */
+  cursor: pointer; /* مؤشر الفأرة */
+  border: 1px solid #fff; /* الحدود */
+  outline: none; /* إزالة الحدود الخارجية */
+  transition: 0.2s; /* الانتقال السلس */
+}
+
+body {
+  /* تنسيق الجسم العام للصفحة */
+  width: 100%; /* رض الصفحة بالكامل */
+  overflow-x: hidden;
+}
+
+/* header Section start*/
+
+#header {
+  /* تنسيق ترويسة الصفحة وتثبيتها أعلى الشاشة أثناء التمرير */
+  display: flex; /* ترتيب عناصر الترويسة بجانب بعضها */
+  align-items: center; /* محاذاة العناصر عمودياً إلى الوسط */
+  justify-content: space-between; /* توزيع العناصر مع مسافة بينها*/
+  padding: 20px 80px; /* إضافة مساحة داخلية عمودية وأفقية */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6); /* إضافة ظل خفيف أسفل الترويسة */
+  background: #e3e6f3; /* تعيين لون خلفية الترويسة */
+  z-index: 999; /* إبقاء الترويسة فوق العناصر الأخرى */
+  position: sticky; /* تثبيت الترويسة عند التمرير */
+  top: 0; /* تثبيتها عند أعلى الصفحة */
+  left: 0; /* محاذاتها إلى الجهة اليسرى */
+}
+
+#mobile {
+  display: none; /* إخفاء عناصر واجهة الهاتف افتراضياً */
+  align-items: center; /* محاذاة العناصر عمودياً إلى الوسط */
+}
+
+#close {
+  display: none; /* إخفاء زر الإغلاق افتراضياً */
+}
+
+#header .logo {
+  max-height: 40px; /* ضبط حجم الشعار تلقائياً */
+  object-fit: contain; /* احتواء الصورة بالكامل مع الحفاظ على تناسب أبعادها */
+}
+
+/* header Section end*/
+
+/*navbar Section start*/
+
+#navbar {
+  /* تنسيق شريط التنقل */
+  display: flex; /* ترتيب عناصر شريط التنقل بجانب بعضها */
+  align-items: center; /* محاذاة العناصر عمودياً إلى الوسط */
+  justify-content: space-between; /* توزيع العناصر مع مسافة بينها */
+}
+
+#navbar li {
+  /* تنسيق عناصر القائمة */
+  list-style: none; /* إزالة العلامات الافتراضية للقائمة */
+  padding: 0 20px; /* إضافة تباعد أفقي حول كل عنصر */
+  position: relative; /* اعتماد موضع نسبي للعناصر التابعة */
+}
+
+#navbar li a {
+  /* تنسيق الروابط داخل عناصر القائمة */
+  text-decoration: none; /* إزالة الخط أسفل الرابط */
+  font-size: 16px; /* تحديد حجم خط الرابط */
+  font-weight: 600; /* جعل الخط شبه عريض */
+  color: #1a1a1a; /* تحديد لون نص الرابط */
+  transition: 0.3s ease; /* إضافة انتقال سلس للتغييرات */
+}
+#navbar li a:hover,/* تغيير لون الرابط عند المرور عليه */
+#navbar li a.active {
+  /* تغيير لون الرابط عند تفعيله */
+  color: #088178; /* تغيير لون الرابط عند المرور عليه أو تفعيله */
+}
+#navbar li a.active::after,/* إضافة خط أسفل الرابط النشط */
+#navbar li a:hover::after {
+  /* إضافة خط أسفل الرابط عند المرور عليه */
+  content: ""; /* إضافة خط أسفل الرابط النشط */
+  width: 30%; /* جعل عرض الخط يساوي عرض الرابط */
+  height: 2px; /* تحديد ارتفاع الخط */
+  position: absolute; /* تحديد موضع الخط */
+  bottom: -4px; /* إبعاد الخط عن أسفل الرابط */
+  left: 20px; /* محاذاة الخط إلى الجهة اليسرى */
+  background-color: #088178; /* تعيين لون الخط */
+}
+/*navbar Section and */
+
+/* Hero Section start */
+#hero {
+  background-image: url("images/hero4.png"); /* غيرها حسب صورتك */
+  height: 90vh; /* تحديد ارتفاع القسم الرئيسي */
+  width: 100%; /* جعل القسم الرئيسي بعرض الصفحة بالكامل */
+  background-size: cover; /* تغطية مساحة القسم الرئيسي بالكامل بصورة الخلفية */
+  background-position: 25% right 0%; /* ضبط موضع صورة الخلفية */
+  padding: 0 80px; /* إضافة مساحة داخلية أفقية */
+  display: flex; /* ترتيب عناصر القسم الرئيسي باستخدام التخطيط المرن */
+  flex-direction: column; /* ترتيب العناصر عمودياً */
+  align-items: flex-start; /* محاذاة العناصر إلى بداية السطر */
+  justify-content: center; /* محاذاة العناصر عمودياً إلى الوسط */
+}
+
+#hero h4 {
+  /* تنسيق العنوان الفرعي في القسم الرئيسي */
+
+  padding-bottom: 15px; /* إضافة مساحة أسفل العنوان الفرعي */
+}
+
+#hero h1 {
+  color: #088178; /* تعيين لون العنوان الرئيسي */
+}
+
+#hero button {
+  /* تنسيق زر الاستكشاف في القسم الرئيسي */
+  background-image: url("images/button1.png"); /* إضافة صورة خلفية للزر */
+  background-color: transparent; /* جعل خلفية الزر شفافة */
+  color: #088178; /* تعيين لون نص الزر */
+  border: 0; /* إزالة إطار الزر */
+  padding: 14px 80px 14px 65px; /* ضبط المساحة الداخلية للزر */
+  background-repeat: no-repeat; /* منع تكرار صورة الخلفية */
+  cursor: pointer; /* إظهار مؤشر اليد عند المرور على الزر */
+  font-weight: 700; /* جعل نص الزر عريضاً */
+  font-size: 15px; /* تحديد حجم نص الزر */
+  margin-top: 10px; /* إضافة مسافة أعلى الزر */
+}
+/* Hero Section end */
+
+/* Feature Section start */
+#feature {
+  /* تنسيق قسم الميزات */
+  display: flex; /* ترتيب عناصر قسم الميزات باستخدام التخطيط المرن */
+  align-items: center; /* محاذاة العناصر عمودياً إلى الوسط */
+  justify-content: space-between; /* توزيع العناصر مع مسافة بينها */
+  flex-wrap: wrap; /* السماح بانتقال العناصر إلى سطر جديد عند الحاجة */
+}
+
+#feature .fe-box {
+  width: 180px; /* تحديد عرض صندوق الميزة */
+  text-align: center; /* توسيط النص داخل الصندوق */
+  padding: 25px 15px; /* إضافة مساحة داخلية للصندوق */
+  box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03); /* إضافة ظل خفيف */
+  border: 1px solid #cce7d0; /* إضافة إطار رفيع للصندوق */
+  border-radius: 4px; /* تدوير زوايا الصندوق */
+  margin: 15px 0; /* إضافة مسافة خارجية عمودية */
+  transition: 0.3s ease; /* جعل التغييرات مرئية بسلاسة */
+}
+
+#feature .fe-box:hover {
+  box-shadow: 10px 10px 54px rgba(70, 62, 211, 0.1); /* تغيير الظل عند المرور على الصندوق */
+}
+
+#feature .fe-box img {
+  /* تنسيق الصور داخل صناديق الميزات */
+  width: 100%; /* جعل الصورة بعرض الصندوق بالكامل */
+  margin-bottom: 10px; /* إضافة مسافة أسفل الصورة */
+}
+
+#feature .fe-box h6 {
+  display: inline-block; /* عرض العنوان ضمن كتلة قابلة لتحديد الأبعاد */
+  padding: 9px 8px 6px 8px; /* إضافة مساحة داخلية حول العنوان */
+  line-height: 1; /* ضبط ارتفاع سطر العنوان */
+  border-radius: 4px; /* تدوير زوايا خلفية العنوان */
+  color: #088178; /* تعيين لون نص العنوان */
+  background-color: #fddde4; /* تعيين لون خلفية العنوان */
+}
+
+#feature .fe-box:nth-child(2) h6 {
+  /* تنسيق عنوان صندوق الميزة الثاني */
+
+  background-color: #cdebbc; /* تعيين لون خلفية عنوان صندوق الميزة الثاني */
+}
+#feature .fe-box:nth-child(3) h6 {
+  /* تنسيق عنوان صندوق الميزة الثالث */
+  background-color: #d1e8f2; /* تعيين لون خلفية عنوان صندوق الميزة الثالث */
+}
+#feature .fe-box:nth-child(4) h6 {
+  background-color: #cdd4f8; /* تعيين لون خلفية عنوان صندوق الميزة الرابع */
+}
+#feature .fe-box:nth-child(5) h6 {
+  background-color: #f6dbf6; /* تعيين لون خلفية عنوان صندوق الميزة الخامس */
+}
+#feature .fe-box:nth-child(6) h6 {
+  background-color: #fff2e5; /* تعيين لون خلفية عنوان صندوق الميزة السادس */
+}
+/* Feature Section end */
+
+/** product1 .pro-container START**/
+
+#product1 {
+  text-align: center;
+}
+
+#product1 .pro-container {
+  display: flex; /* ترتيب بطاقات المنتجات باستخدام التخطيط المرن */
+  justify-content: space-between; /* توزيع البطاقات مع مسافة بينها */
+  padding-top: 20px; /* إضافة مساحة أعلى الحاوية */
+  flex-wrap: wrap; /* السماح بانتقال البطاقات إلى سطر جديد عند الحاجة */
+}
+
+#product1 .pro {
+  /* تنسيق بطاقة المنتج */
+  width: 23%; /* تحديد عرض بطاقة المنتج */
+  min-width: 250px; /* تحديد الحد الأدنى لعرض البطاقة */
+  padding: 10px 12px; /* إضافة مساحة داخلية للبطاقة */
+  border: 1px solid #cce7d0; /* إضافة إطار رفيع للبطاقة */
+  border-radius: 25px; /* تدوير زوايا البطاقة */
+  cursor: pointer; /* إظهار مؤشر اليد عند المرور على البطاقة */
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02); /* إضافة ظل خفيف */
+  margin: 15px 0; /* إضافة مسافة خارجية عمودية */
+  transition: 0.2s ease; /* جعل التغييرات مرئية بسلاسة */
+  position: relative; /* اعتماد موضع نسبي للعناصر التابعة */
+}
+
+#product1 .pro:hover {
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06); /* زيادة وضوح الظل عند المرور على البطاقة */
+  transform: translateY(-5px); /* رفع البطاقة قليلاً عند المرور عليها */
+}
+
+#product1 .pro img {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 20px; /* تدوير زوايا الصورة */
+}
+
+#product1 .pro .des {
+  text-align: start; /* محاذاة الوصف إلى بداية السطر */
+  padding: 10px 0; /* إضافة مساحة عمودية حول الوصف */
+}
+
+#product1 .pro .des span {
+  color: #606063; /* تعيين لون النص */
+  font-size: 12px; /* تحديد حجم الخط */
+}
+
+#product1 .pro .des h5 {
+  padding-top: 7px; /* إضافة مساحة أعلى اسم المنتج */
+  color: #1a1a1a; /* تعيين لون اسم المنتج */
+  font-size: 14px; /* تحديد حجم خط اسم المنتج */
+}
+
+#product1 .pro .des i {
+  color: rgba(243, 181, 25);
+  font-size: 12px; /* تحديد حجم أيقونات النجوم */
+}
+
+#product1 .pro .des h4 {
+  padding-top: 7px; /* إضافة مساحة أعلى السعر */
+  font-size: 15px; /* تحديد حجم خط السعر */
+  font-weight: 700; /* جعل خط السعر عريضاً */
+  color: #088178; /* تعيين لون السعر */
+}
+
+/* زر إضافة إلى السلة الأيقوني الدائري */
+#product1 .pro a {
+  width: 40px; /* تحديد عرض الرابط */
+  height: 40px; /* تحديد ارتفاع الرابط */
+  line-height: 40px; /* توسيط محتوى الرابط عمودياً */
+  border-radius: 50px; /* جعل شكل الرابط دائرياً */
+  background-color: #e8f6ea; /* تعيين لون خلفية الرابط */
+  font-weight: 500; /* تحديد سماكة خط الرابط */
+  color: #088178; /* تعيين لون نص الرابط */
+  position: absolute; /* تحديد موضع الرابط داخل البطاقة */
+  bottom: 20px; /* إبعاد الرابط عن أسفل البطاقة */
+  right: 10px; /* إبعاد الرابط عن يمين البطاقة */
+  text-align: center; /* توسيط محتوى الرابط أفقياً */
+  transition: 0.2s ease; /* جعل تغييرات التنسيق سلسة */
+}
+
+#product1 .pro a:hover {
+  background-color: #088178; /* تغيير لون الخلفية عند المرور */
+  color: #fff; /* تغيير لون النص عند المرور */
+}
+/** product1 .pro-container END**/
+
+/* (Banner Section start)*/
+#banner {
+  display: flex; /* استخدام تخطيط مرن لمحتوى اللافتة */
+  flex-direction: column; /* ترتيب محتوى اللافتة عمودياً */
+  justify-content: center; /* توسيط المحتوى عمودياً */
+  align-items: center; /* توسيط المحتوى أفقياً */
+  text-align: center; /* توسيط النص داخل اللافتة */
+  background-image: url(images/b2.jpg);
+  width: 100%; /* جعل اللافتة بعرض الصفحة */
+  height: 40vh; /* تحديد ارتفاع اللافتة */
+  background-size: cover; /* تغطية مساحة اللافتة بالصورة */
+  background-position: center; /* توسيط صورة الخلفية */
+}
+
+#banner h4 {
+  color: #fff; /* تعيين لون العنوان الفرعي */
+  font-size: 16px; /* تحديد حجم العنوان الفرعي */
+}
+#banner h2 {
+  color: #fff; /* تعيين لون العنوان الرئيسي */
+  font-size: 30px; /* تحديد حجم العنوان الرئيسي */
+  padding: 18px 0; /* إضافة مساحة عمودية حول العنوان */
+}
+#banner h2 span {
+  color: #ef3636; /* تمييز النص داخل العنوان بلون مختلف */
+}
+
+#banner button:hover {
+  background: #088178; /* تغيير خلفية الزر عند المرور عليه */
+  color: #fff; /* تغيير لون نص الزر عند المرور عليه */
+}
+#sm-banner {
+  display: flex;
+  justify-content: space-between; /* توزيع محتوى اللافتة الصغيرة بشكل مرن */
+  flex-wrap: wrap; /* السماح بانتقال العناصر إلى سطر جديد عند الحاجة */
+}
+
+#sm-banner .banner-box {
+  display: flex; /* استخدام تخطيط مرن لمحتوى اللافتة */
+  flex-direction: column; /* ترتيب محتوى اللافتة عمودياً */
+  justify-content: center; /* توسيط المحتوى عمودياً */
+  align-items: flex-start; /* توسيط المحتوى أفقياً */
+  text-align: center; /* توسيط النص داخل اللافتة */
+  background-image: url(images/b17.jpg);
+  min-width: 580px; /* تحديد الحد الأدنى لعرض اللافتة */
+  height: 50vh; /* تحديد ارتفاع اللافتة */
+  background-size: cover; /* تغطية مساحة اللافتة بالصورة */
+  background-position: center;
+  padding: 30px; /* إضافة مساحة داخلية حول محتوى اللافتة */
+}
+#sm-banner .banner-box2 {
+  background-image: url(images/b10.jpg);
+}
+#sm-banner h4 {
+  color: #fff; /* تعيين لون العنوان الفرعي */
+  font-size: 20px; /* تحديد حجم العنوان الفرعي */
+  font-weight: 300; /* جعل العنوان الفرعي عريضاً */
+}
+#sm-banner h2 {
+  color: #fff; /* تعيين لون العنوان الفرعي */
+  font-size: 28px; /* تحديد حجم العنوان الفرعي */
+  font-weight: 800; /* جعل العنوان الفرعي عريضاً */
+}
+#sm-banner span {
+  color: #fff; /* تعيين لون العنوان الفرعي */
+  font-size: 14px; /* تحديد حجم العنوان الفرعي */
+  font-weight: 500; /* جعل العنوان الفرعي عريضاً */
+  padding-bottom: 15px;
+}
+#sm-banner .banner-box:hover button {
+  background: #088178; /* تغيير خلفية الزر عند المرور عليه */
+  border: 1px solid #088178; /* تغيير لون حدود الزر عند المرور عليه */
+}
+#banner3 {
+  display: flex; /* استخدام تخطيط مرن لمحتوى اللافتة */
+  justify-content: space-between; /* توزيع محتوى اللافتة بشكل مرن */
+  flex-wrap: wrap; /* السماح بانتقال العناصر إلى سطر جديد عند الحاجة */
+  padding: 0 60px; /* إضافة مساحة داخلية حول محتوى اللافتة */
+}
+#banner3 .banner-box {
+  display: flex; /* استخدام تخطيط مرن لمحتوى اللافتة */
+  flex-direction: column; /* ترتيب محتوى اللافتة عمودياً */
+  justify-content: center; /* توسيط المحتوى عمودياً */
+  align-items: flex-start; /* توسيط المحتوى أفقياً */
+  text-align: center; /* توسيط النص داخل اللافتة */
+  background-image: url(images/b7.jpg);
+  min-width: 300px; /* تحديد الحد الأدنى لعرض اللافتة */
+  height: 50vh; /* تحديد ارتفاع اللافتة */
+  background-size: cover; /* تغطية مساحة اللافتة بالصورة */
+  background-position: center;
+  padding: 20px; /* إضافة مساحة داخلية حول محتوى اللافتة */
+  margin-bottom: 20px; /* إضافة مسافة خارجية أسفل اللافتة */
+}
+
+#banner3 .banner-box2 {
+  background-image: url(images/b4.jpg);
+}
+#banner3 .banner-box3 {
+  background-image: url(images/b18.jpg);
+}
+#banner3 h2 {
+  color: #fff; /* تعيين لون العنوان الفرعي */
+  font-size: 22px; /* تحديد حجم العنوان الفرعي */
+  font-weight: 900; /* جعل العنوان الفرعي عريضاً */
+}
+#banner3 h3 {
+  color: #fff; /* تعيين لون العنوان الفرعي */
+  font-size: 15px; /* تحديد حجم العنوان الفرعي */
+  font-weight: 600; /* جعل العنوان الفرعي عريضاً */
+}
+
+#newsletter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  background-image: url(images/b14.png);
+  background-repeat: no-repeat;
+  background-position: 20% 30%;
+  background-size: cover;
+  background-color: #041e42;
+}
+
+#newsletter h4 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+#newsletter p {
+  color: #818ea0;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+#newsletter p span {
+  color: #ffbd27;
+  font-weight: 700;
+}
+
+#newsletter .form {
+  display: flex;
+  width: 40%;
+}
+
+#newsletter input {
+  width: 100%;
+  min-width: 0;
+  height: 3.125rem;
+  padding: 0 1.25em;
+  border: 1px solid transparent;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  font-size: 14px;
+}
+
+#newsletter button {
+  flex-shrink: 0;
+  color: #fff;
+  background-color: #088178;
+  border-radius: 0 4px 4px 0;
+  white-space: nowrap;
+}
+
+/*(Banner Section end) */
+
+/* Footer start */
+footer {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 30px 24px;
+  padding: 40px 80px;
+  background-color: #fff;
+}
+
+footer > .section-p1 {
+  display: contents;
+}
+
+footer .col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+footer .col .logo {
+  width: 140px;
+  margin-bottom: 24px;
+}
+
+footer h4 {
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+footer p {
+  margin: 0 0 10px;
+  color: #465b52;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+footer .col a {
+  margin-bottom: 10px;
+  color: #465b52;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+footer .col a:hover,
+footer .follow .icon i:hover {
+  color: #088178;
+}
+
+footer .follow {
+  margin-top: 20px;
+}
+
+footer .follow .icon {
+  display: flex;
+  gap: 14px;
+}
+
+footer .follow .icon i {
+  color: #465b52;
+  cursor: pointer;
+}
+
+footer .install .row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+footer .install .row img {
+  width: 130px;
+  max-width: 48%;
+  border: 1px solid #088178;
+  border-radius: 6px;
+}
+
+footer .install > img {
+  width: 100%;
+  max-width: 224px;
+}
+
+footer .copyright {
+  grid-column: 1 / -1;
+  padding-top: 20px;
+  border-top: 1px solid #e1e1e1;
+  text-align: center;
+}
+
+footer .copyright p {
+  margin: 0;
+}
+/* Footer end */
+
+/*blog Product start */
+#page-header {
+  background-image: url(images/b1.jpg);
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 14px;
+}
+#page-header h2,
+#page-header p {
+  color: #fff;
+}
+#pagination {
+  text-align: center;
+}
+#pagination a {
+  text-decoration: none;
+  background-color: #088178;
+  padding: 15px 20px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 600;
+}
+
+#pagination a i {
+  font-size: 16px;
+  font-weight: 600;
+}
+/*shop page-header end */
+
+/*sproduct start */
+#prodetails {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#prodetails .single-pro-image {
+  width: 40%;
+  margin-right: 50px;
+}
+
+.small-img-group {
+  display: flex;
+  justify-content: space-between;
+}
+.small-img-col {
+  flex-basis: 24%;
+  cursor: pointer;
+}
+#prodetails .single-pro-details {
+  width: 50%;
+  padding-top: 30px;
+}
+
+#prodetails .single-pro-details h4 {
+  padding: 40px 0 20px 0;
+}
+#prodetails .single-pro-details h2 {
+  font-size: 26px;
+}
+#prodetails .single-pro-details select {
+  display: block;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+#prodetails .single-pro-details input {
+  width: 50px;
+  height: 47px;
+  padding-left: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+#prodetails .single-pro-details input:focus {
+  outline: none;
+}
+
+#prodetails .single-pro-details button {
+  background: #088178;
+  color: #fff;
+}
+#prodetails .single-pro-details span {
+  line-height: 25px;
+}
+
+/*blog Page start*/
+#page-header.blog-header {
+  background-image: url(images/b19.jpg);
+}
+#blog {
+  padding: 150px 150px 0 150px;
+}
+#blog .blog-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  padding-bottom: 70px;
+}
+#blog .blog-img {
+  width: 50%;
+  margin-right: 40px;
+}
+#blog img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+#blog .blog-details {
+  width: 50%;
+}
+#blog .blog-details a {
+  text-decoration: none;
+  font-size: 11px;
+  color: #000;
+  font-weight: 700;
+}
+#blog .blog-details a {
+  text-decoration: none;
+  font-size: 11px;
+  color: #000;
+  font-weight: 700;
+  position: relative;
+  transition: 0.3s;
+}
+
+#blog .blog-details a::after {
+  content: "";
+  width: 50px;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  top: 4px;
+  right: -60px;
+}
+#blog .blog-details a:hover {
+  color: #088178;
+}
+#blog .blog-details a:hover::after {
+  background-color: #088178;
+}
+#blog .blog-box h1 {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  font-size: 70px;
+  font-weight: 700;
+  color: #c9cbce;
+  z-index: -9;
+}
+/*blog Page end*/
+
+/*about Page start*/
+#page-header.about-header {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url(images/banner.png);
+}
+
+#about-head {
+  display: flex;
+  align-items: center;
+}
+
+#about-head img {
+  width: 50%;
+  height: auto;
+}
+
+#about-head div {
+  padding-left: 40px;
+}
+
+#about-app {
+  text-align: center;
+}
+
+#about-app .video {
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(8, 129, 120, 0.08);
+}
+
+#about-app video {
+  width: 100%;
+  display: block;
+}
+
+/*about Page end*/
+
+/* Contact Page start*/
+#contact-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+#contact-details .details {
+  flex: 1 1 40%;
+  min-width: 0;
+}
+
+#contact-details .details > span {
+  color: #088178;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+#contact-details .details h2 {
+  margin: 16px 0 28px;
+  font-size: 28px;
+  line-height: 1.4;
+}
+
+#contact-details .details h3 {
+  margin-bottom: 16px;
+  color: #222;
+  font-size: 16px;
+}
+
+#contact-details .details ul {
+  list-style: none;
+}
+
+#contact-details .details li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+#contact-details .details li i {
+  width: 18px;
+  margin-top: 17px;
+  color: #088178;
+  text-align: center;
+}
+
+#contact-details .details li p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+#contact-details .map {
+  flex: 1 1 60%;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+#contact-details .map iframe {
+  display: block;
+  width: 100%;
+  height: 420px;
+  border: 0;
+}
+
+/* Contact Page end*/
+
+header .btn {
+  padding: 15px 40px;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 12px;
+}
+.btn::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #333;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+/*about Page end*/
+#cart.section-1 {
+  padding: 40px 80px;
+  overflow-x: auto;
+}
+
+#cart table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  table-layout: fixed;
+  white-space: nowrap;
+}
+
+#cart table thead {
+  border-bottom: 1px solid #e2e9e1;
+}
+
+#cart table thead td {
+  padding: 18px 10px;
+  color: #222;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#cart table tbody tr {
+  border-bottom: 1px solid #e2e9e1;
+  transition: background-color 0.2s ease;
+}
+
+#cart table tbody tr:hover {
+  background-color: #f8faf9;
+}
+
+#cart table tbody td {
+  padding: 18px 10px;
+  color: #465b52;
+  font-size: 13px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#cart table thead td:nth-child(1),
+#cart table tbody td:nth-child(1) {
+  width: 9%;
+}
+
+#cart table thead td:nth-child(2),
+#cart table tbody td:nth-child(2) {
+  width: 14%;
+}
+
+#cart table thead td:nth-child(3),
+#cart table tbody td:nth-child(3) {
+  width: 29%;
+  text-align: left;
+}
+
+#cart table thead td:nth-child(4),
+#cart table tbody td:nth-child(4),
+#cart table thead td:nth-child(5),
+#cart table tbody td:nth-child(5),
+#cart table thead td:nth-child(6),
+#cart table tbody td:nth-child(6) {
+  width: 12%;
+}
+
+#cart table tbody td img {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+#cart table tbody td a {
+  color: #465b52;
+  font-size: 18px;
+  transition: color 0.2s ease;
+}
+
+#cart table tbody td a:hover {
+  color: #088178;
+}
+
+#cart table tbody td input[type="number"] {
+  width: 64px;
+  height: 42px;
+  padding: 0 8px;
+  border: 1px solid #cce7d0;
+  border-radius: 4px;
+  color: #222;
+  font-size: 14px;
+  text-align: center;
+}
+
+#cart table tbody td input[type="number"]:focus {
+  border-color: #088178;
+  outline: 2px solid rgba(8, 129, 120, 0.15);
+}
+/*cart Page start*/
+
+
+/*cart Page end*/
+
+.btn::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #ff00cb,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+  opacity: 0;
+}
+
+#mobile {
+  display: none; /* إخفاء عناصر واجهة الهاتف افتراضياً */
+  align-items: center; /* محاذاة العناصر عمودياً إلى الوسط */
+}
+
+#close {
+  display: none; /* إخفاء زر الإغلاق افتراضياً */
+}
+
+/* إخفاء وسم الماركي التالف من التأثير على التصميم */
+marquee {
+  display: none;
+}
+
+#about-head marquee {
+  display: block;
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+  .section-p1 {
+    padding: 40px;
+  }
+
+  #cart.section-1 {
+    padding: 32px 40px;
+  }
+
+  #contact-details {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 32px;
+  }
+
+  #contact-details .map iframe {
+    height: 380px;
+  }
+
+  #header {
+    padding: 20px 40px;
+  }
+
+  #mobile {
+    display: flex;
+    gap: 18px;
+  }
+
+  #mobile a,
+  #mobile i {
+    color: #1a1a1a;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -320px;
+    width: 300px;
+    max-width: 85vw;
+    height: 100vh;
+    padding: 80px 24px 30px;
+    background-color: #e3e6f3;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  #navbar.active {
+    right: 0;
+  }
+
+  #navbar li {
+    margin-bottom: 24px;
+    padding: 0;
+  }
+
+  #navbar li a {
+    font-size: 16px;
+  }
+
+  #navbar li a.active::after,
+  #navbar li a:hover::after {
+    left: 0;
+  }
+
+  #navbar #Ig-bag {
+    display: none;
+  }
+
+  #close {
+    display: block;
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    color: #1a1a1a;
+    font-size: 22px;
+  }
+
+  #hero {
+    height: 70vh;
+    min-height: 480px;
+    padding: 0 40px;
+    background-position: 65% center;
+  }
+
+  #feature {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  #feature .fe-box {
+    width: calc(33.333% - 12px);
+    margin: 8px 0;
+  }
+
+  #product1 .pro-container {
+    justify-content: center;
+    gap: 16px;
+  }
+
+  #product1 .pro {
+    width: calc(50% - 16px);
+    min-width: 0;
+    margin: 0;
+  }
+
+  #sm-banner {
+    gap: 20px;
+  }
+
+  #sm-banner .banner-box {
+    width: 100%;
+    min-width: 0;
+    height: 40vh;
+    min-height: 280px;
+  }
+
+  #banner3 {
+    gap: 16px;
+    padding: 0 40px;
+  }
+
+  #banner3 .banner-box {
+    flex: 1 1 calc(50% - 16px);
+    min-width: 0;
+    height: 35vh;
+    min-height: 220px;
+  }
+
+  #newsletter {
+    gap: 24px;
+  }
+
+  #newsletter .form {
+    width: 50%;
+  }
+
+  footer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 40px;
+  }
+
+  footer > .section-p1 > .col,
+  footer > .col.install {
+    grid-column: 1 / -1;
+  }
+
+  #blog {
+    padding: 100px 40px 0;
+  }
+
+  #blog .blog-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #blog .blog-img,
+  #blog .blog-details {
+    width: 100%;
+    margin: 0 0 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-p1 {
+    padding: 32px 20px;
+  }
+
+  #cart.section-1 {
+    padding: 24px 20px;
+  }
+
+  #contact-details .details h2 {
+    font-size: 24px;
+  }
+
+  #contact-details .map iframe {
+    height: 320px;
+  }
+
+  h1 {
+    font-size: 38px;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 30px;
+    line-height: 1.25;
+  }
+
+  #header {
+    padding: 14px 20px;
+  }
+
+  #hero {
+    height: 65vh;
+    min-height: 420px;
+    padding: 0 20px;
+    background-position: 62% center;
+  }
+
+  #hero h2 {
+    font-size: 25px;
+  }
+
+  #hero h1 {
+    font-size: 34px;
+  }
+
+  #hero p {
+    max-width: 270px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  #hero button {
+    padding: 14px 60px 14px 48px;
+  }
+
+  #feature {
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  #feature .fe-box {
+    width: calc(50% - 5px);
+    padding: 18px 10px;
+  }
+
+  #feature .fe-box img {
+    max-width: 100%;
+  }
+
+  #product1 .pro-container {
+    gap: 12px;
+  }
+
+  #product1 .pro {
+    width: calc(50% - 6px);
+    padding: 8px;
+    border-radius: 16px;
+  }
+
+  #product1 .pro img {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  #product1 .pro .des h5 {
+    font-size: 12px;
+  }
+
+  #product1 .pro .des h4 {
+    font-size: 14px;
+  }
+
+  #product1 .pro a {
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    bottom: 12px;
+    right: 8px;
+  }
+
+  #banner {
+    height: 35vh;
+    min-height: 240px;
+    padding: 20px;
+    background-position: center;
+  }
+
+  #banner h2 {
+    font-size: 24px;
+  }
+
+  #sm-banner .banner-box {
+    height: 34vh;
+    min-height: 240px;
+    padding: 24px;
+  }
+
+  #sm-banner h2 {
+    font-size: 24px;
+  }
+
+  #banner3 {
+    gap: 12px;
+    padding: 0 20px;
+  }
+
+  #banner3 .banner-box {
+    flex-basis: 100%;
+    height: 30vh;
+    min-height: 200px;
+  }
+
+  #newsletter .newstext,
+  #newsletter .form {
+    width: 100%;
+  }
+
+  #newsletter h4 {
+    font-size: 19px;
+  }
+
+  #newsletter .form input {
+    padding: 0 12px;
+    font-size: 12px;
+  }
+
+  #newsletter .form button {
+    padding: 12px 16px;
+    font-size: 12px;
+  }
+
+  footer {
+    gap: 24px 16px;
+    padding: 32px 20px;
+  }
+
+  footer .col .logo {
+    max-width: 100%;
+  }
+
+  #blog {
+    padding: 90px 20px 0;
+  }
+
+  #blog .blog-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 40px;
+  }
+
+  #blog .blog-img {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
+
+  #blog .blog-details {
+    width: 100%;
+  }
+
+  #blog .blog-box h1 {
+    font-size: 46px;
+    top: -20px;
+  }
+
+  #about-head {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  #about-head img,
+  #about-head div {
+    width: 100%;
+  }
+
+  #about-head img {
+    height: 320px;
+  }
+
+  #about-app .video {
+    width: 100%;
+  }
+
+  #about-app h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 380px) {
+  .section-p1 {
+    padding: 28px 14px;
+  }
+
+  #header {
+    padding: 12px 14px;
+  }
+
+  #hero {
+    padding: 0 14px;
+  }
+
+  #hero h1 {
+    font-size: 30px;
+  }
+
+  #product1 .pro {
+    width: 100%;
+  }
+
+  #banner3 {
+    padding: 0 14px;
+  }
+
+  #newsletter {
+    padding: 28px 14px;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+    padding: 28px 14px;
+  }
+
+  footer > .section-p1 > .col,
+  footer > .col.install {
+    grid-column: auto;
+  }
+
+  footer .copyright {
+    grid-column: 1;
+  }
+  #blog {
+    padding: 80px 14px 0;
+  }
+
+  #blog .blog-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #blog .blog-img {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
+
+  #blog .blog-details {
+    width: 100%;
+  }
+
+  #blog img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+  }
+ 
+}
